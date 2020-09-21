@@ -9,8 +9,8 @@
         <module name="Bookmaker-Forks-Scanner" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Bookmaker-Forks-Scanner" target="1.5" />
+    <bytecodeTargetLevel target="11">
+      <module name="Bookmaker-Forks-Scanner" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

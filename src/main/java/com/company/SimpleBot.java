@@ -7,11 +7,12 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 public class SimpleBot extends TelegramLongPollingBot  {
 
     public void onUpdateReceived(Update update) {
+        RequestFactory factory = new RequestFactory();
         if( update.hasMessage() && update.getMessage().hasText())
         {
             SendMessage sendMessage = new SendMessage()
                     .setChatId(update.getMessage().getChatId())
-                    .setText(Reverse(update.getMessage().getText()));
+                    .setText(factory.getJoke(update.getMessage().getText()));
             try{
                 execute(sendMessage);
             }

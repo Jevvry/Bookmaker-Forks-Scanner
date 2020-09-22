@@ -7,7 +7,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +25,10 @@ public class RequestFactory {
     public String getJoke(String id) {
         if (!urls.containsKey(id)) {
             id = "/joke";
+        }
+        if(id.equals("/help"))
+        {
+            return "Бот для забав!";
         }
         String url = urls.get(id);
         try {

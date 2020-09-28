@@ -23,14 +23,15 @@ public class RequestFactory {
 
 
     public String getJoke(String id) {
-        if (!urls.containsKey(id)) {
-            id = "/joke";
-        }
-        if(id.equals("/help"))
-        {
+        String url;
+        if (id.equals("/help")) {
             return "Бот для забав!";
+        } else if (!urls.containsKey(id)) {
+            return "Не знаю такой команды.";
+
+        } else {
+            url = urls.get(id);
         }
-        String url = urls.get(id);
         try {
 
 
@@ -39,7 +40,7 @@ public class RequestFactory {
 
             connection.setRequestMethod("GET");
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "Cp1251"));
+            BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream(), "windows-1251"));
             String inputLine;
             StringBuilder response = new StringBuilder();
 

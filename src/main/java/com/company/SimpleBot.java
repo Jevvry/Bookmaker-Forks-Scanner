@@ -28,7 +28,7 @@ public class SimpleBot extends TelegramLongPollingBot  {
     }
 
     public String getBotToken() {
-        return "1117798662:AAHhmBAx-gm2VIi_ZUkD2itCtkSNAAFMErM";
+        return "fuck";
     }
 
     private  String Reverse(String str)

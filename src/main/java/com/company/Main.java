@@ -6,14 +6,13 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 public class Main {
 
-    public static void main(String[] args) {
-        ApiContextInitializer.init();
-        TelegramBotsApi botsApi = new TelegramBotsApi();
-        try {
-            botsApi.registerBot(new SimpleBot());
-        } catch (TelegramApiException e) {
-            e.printStackTrace();
-        }
-        // write your code here
-    }
+	public static void main(String[] args) {
+		ApiContextInitializer.init();
+		TelegramBotsApi botsApi = new TelegramBotsApi();
+		try {
+			botsApi.registerBot(new SimpleBot());
+		} catch (TelegramApiException e) {
+			e.printStackTrace();
+		}
+	}
 }

@@ -1,7 +1,7 @@
-package com.company.BettingMath;
+package com.company.betting_math;
 
-import com.company.BettingDescription.BetOffice;
-import com.company.BettingDescription.Fork;
+import com.company.betting_description.BetOffice;
+import com.company.betting_description.Fork;
 
 import java.util.ArrayList;
 

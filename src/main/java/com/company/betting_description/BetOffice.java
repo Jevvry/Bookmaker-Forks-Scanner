@@ -1,4 +1,4 @@
-package com.company.BettingDescription;
+package com.company.betting_description;
 
 import java.util.HashMap;
 

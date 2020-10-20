@@ -44,6 +44,6 @@ public class ForksBot extends TelegramLongPollingBot {
     }
 
     public String getBotToken() {
-        return "1117798662:AAHhmBAx-gm2VIi_ZUkD2itCtkSNAAFMErM";
+        return "";
     }
 }

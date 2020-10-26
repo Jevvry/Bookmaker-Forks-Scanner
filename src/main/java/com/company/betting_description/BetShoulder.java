@@ -37,7 +37,7 @@ public class BetShoulder {
 		}
 	}
 
-	public String toString() {
+	public String toMessage() {
 		return String.format("Ставка на: %s.\nВ бк: %s.\nКоэффициент: %f.", teamName, betOfficeName,
 				coefficient);
 	}

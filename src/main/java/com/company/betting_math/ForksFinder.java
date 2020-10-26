@@ -3,10 +3,8 @@ package com.company.betting_math;
 import com.company.betting_description.Bet;
 import com.company.betting_description.BetOffice;
 import com.company.betting_description.Fork;
-import com.company.bot_command_handler.IHandler;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class ForksFinder {
@@ -57,6 +55,10 @@ public class ForksFinder {
 
     }
 
+    public int getForksCount() {
+        return forks.size();
+    }
+
     public boolean isForkInit() {
         return forks.size() != 0;
     }
@@ -64,8 +66,14 @@ public class ForksFinder {
     public ArrayList<String> getForks() {
         ArrayList<String> result = new ArrayList<>();
         for (Fork fork : forks) {
-            result.add(fork.toString());
+            result.add(fork.toMessage());
         }
         return result;
     }
+
+    public String getForkPerIndex(Integer i)
+    {
+        return forks.get(i).toMessage();
+    }
+
 }

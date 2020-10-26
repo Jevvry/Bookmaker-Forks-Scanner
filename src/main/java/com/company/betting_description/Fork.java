@@ -33,8 +33,8 @@ public class Fork {
         rightRateCoefficient = 1 / (rightShoulder.getCoefficient() * eventCoefficient);
     }
 
-    public String toString() {
-        return "Событие: " + firstEvent.getBetName() + "\n\n" + lefShoulder.toString() +
-                "\n\n" + rightShoulder.toString();
+    public String toMessage() {
+        return "Событие: " + firstEvent.getBetName() + "\n\n" + lefShoulder.toMessage() +
+                "\n\n" + rightShoulder.toMessage();
     }
 }

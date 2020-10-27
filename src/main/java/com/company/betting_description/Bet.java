@@ -21,7 +21,7 @@ public class Bet {
 	//endregion
 	//region BetOffice
 	public String getBetOfficeName() {
-		return betOffice.getName();
+		return betOffice.getOfficeName();
 	}
 
 	//endregion
@@ -30,8 +30,8 @@ public class Bet {
 
 	public Bet(String firstTeamName, String secondTeamName, String firstTeamCoeff,
 			String secondTeamCoeff, BetOffice betOffice) {
-		firstTeam = new BetShoulder(firstTeamName, firstTeamCoeff, betOffice.getName());
-		secondTeam = new BetShoulder(secondTeamName, secondTeamCoeff, betOffice.getName());
+		firstTeam = new BetShoulder(firstTeamName, firstTeamCoeff, betOffice.getOfficeName());
+		secondTeam = new BetShoulder(secondTeamName, secondTeamCoeff, betOffice.getOfficeName());
 		this.betOffice = betOffice;
 	}
 

@@ -31,7 +31,7 @@ public class BetOffice {
         bettings.put(betName, bet);
     }
 
-    public String getName() {
+    public String getOfficeName() {
         return officeName;
     }
 

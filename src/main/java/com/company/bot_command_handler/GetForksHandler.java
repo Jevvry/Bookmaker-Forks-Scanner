@@ -25,7 +25,7 @@ public class GetForksHandler implements ICommandHandler {
             finder.findForksOneOffice();
         }
         int nextPage = getNextPage(chatId, msg);
-        String fork = finder.getForkPerIndex(nextPage);
+        String fork = finder.getFork(nextPage);
         ReplyMessage replyMessage = new ReplyMessage(fork);
         replyMessage.addRows(getKeyboard());
         return replyMessage;

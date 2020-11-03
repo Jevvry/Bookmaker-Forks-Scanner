@@ -18,9 +18,7 @@ public class AllCommandHandler {
         getForksHandler.addProcessingCommand(handlerMap);
     }
 
-    public ReplyMessage executeCommand(Update update) {
-        String message = update.getMessage().getText();
-        Long chatId = update.getMessage().getChatId();
+    public ReplyMessage executeCommand(String message, Long chatId) {
         if (handlerMap.containsKey(message)) {
             ICommandHandler handler = handlerMap.get(message);
             return handler.executeCommand(message, chatId);

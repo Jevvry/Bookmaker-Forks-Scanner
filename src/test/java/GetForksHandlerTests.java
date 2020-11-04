@@ -14,7 +14,7 @@ public class GetForksHandlerTests {
 	@Before
 	public void setUp() {
 		MarathonBet marathonBet = new MarathonBet();
-		forksFinder = new ForksFinder(marathonBet.betOffice);
+		forksFinder = new ForksFinder(marathonBet.getBetOffice());
 		getForksHandler = new GetForksHandler(forksFinder);
 		// upload forks
 		getForksHandler.executeCommand("/get", 1L);

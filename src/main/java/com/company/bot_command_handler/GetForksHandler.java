@@ -48,7 +48,7 @@ public class GetForksHandler implements ICommandHandler {
             idToPage.put(chatId, nextPage);
         }
         if (nextPage < 0)
-            nextPage = 0;
+            nextPage = finder.getForksCount() + nextPage;
         return nextPage;
     }
 

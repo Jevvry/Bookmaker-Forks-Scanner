@@ -9,7 +9,11 @@ import org.json.simple.parser.JSONParser;
 
 public class MarathonBet {
 
-	public BetOffice betOffice;
+	private BetOffice betOffice;
+
+	public BetOffice getBetOffice() {
+		return betOffice;
+	}
 
 	public MarathonBet() {
 		String json = "{\n"

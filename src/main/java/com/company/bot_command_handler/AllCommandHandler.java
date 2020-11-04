@@ -12,7 +12,7 @@ public class AllCommandHandler {
 
     public AllCommandHandler() {
         MarathonBet marathonBet = new MarathonBet();
-        forksFinder = new ForksFinder(marathonBet.betOffice);
+        forksFinder = new ForksFinder(marathonBet.getBetOffice());
         handlerMap = new HashMap<>();
         GetForksHandler getForksHandler = new GetForksHandler(forksFinder);
         getForksHandler.addProcessingCommand(handlerMap);

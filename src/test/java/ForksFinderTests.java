@@ -14,7 +14,7 @@ public class ForksFinderTests {
 	@Before
 	public void setUp() {
 		marathonBet = new MarathonBet();
-		forksFinder = new ForksFinder(marathonBet.betOffice);
+		forksFinder = new ForksFinder(marathonBet.getBetOffice());
 	}
 
 	@Test
@@ -28,7 +28,7 @@ public class ForksFinderTests {
 	public void testIsFork() {
 		Bet bet = new Bet(
 				"Латвия", "Мальта",
-				"1.7", "5.6", marathonBet.betOffice);
+				"1.7", "5.6", marathonBet.getBetOffice());
 		Assert.assertTrue(forksFinder.isFork(bet));
 	}
 }
